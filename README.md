@@ -37,11 +37,11 @@
 3. Setting RDS in EC2 for creation of database. (Use MySQL database)
 
 **Project Members :**
-*Cyril D'cruz
-Nirbhay Worlikar
-Pratibha Prabhakaran
-Preethi Ravichandran
-Sayma Akter
-Snehal Ghadage* 
+* Cyril D'cruz
+* Nirbhay Worlikar
+* Pratibha Prabhakaran
+* Preethi Ravichandran
+* Sayma Akter
+* Snehal Ghadage
 
 
