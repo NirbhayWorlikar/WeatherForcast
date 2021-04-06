@@ -20,11 +20,11 @@ def home1():
 def homepro():
     return render_template('homePro.php')
 
-@app.route('/login.html')
+@app.route('/login.html', methods=['GET', 'POST'])
 def adminlogin():
     return render_template('login.html')
 
-@app.route('/admin.php')
+@app.route('/admin.php', methods=['GET', 'POST'])
 def admindet():
     return render_template('admin.php')
 
@@ -36,7 +36,11 @@ def loginphp():
 def session():
     return render_template('session.php')
 
-@app.route('/tyregister.php')
+@app.route('/verify.php', methods=['GET', 'POST'])
+def verify():
+    return render_template('verify.php')
+
+@app.route('/tyregister.php', methods=['GET', 'POST'])
 def tyregister():
     return render_template('tyregister.php')
 
@@ -47,6 +51,10 @@ def contact():
 @app.route('/index.html')
 def home():
     return render_template('index.html')
+
+@app.route('/logout.php')
+def logout():
+    return render_template('logout.php')
 
 @app.route('/user-registration.html')
 def registration():
@@ -67,7 +75,7 @@ def render_results():
 
     return render_template('results.php',location=location, temp=temp,feels_like=feels_like, weather=weather)
     
-
+@app.route('/resultsPro', methods=['POST'])
 def render_resultsPro():
     api_key = get_api_key()
     
@@ -79,28 +87,22 @@ def render_resultsPro():
     weather = data["weather"][0]["main"]
     location = data["name"]
 
-
     lat=request.form['lattitude']
     lon=request.form['longitude']
-
-
     airPollution = get_air_pollution(lat,lon,api_key)
 
 
     lattitude =airPollution["coord"]["lat"]
     longitude =airPollution["coord"]["lon"]
     var_no=airPollution["list"][0]["components"]["no"]
+    var_co=airPollution["list"][0]["components"]["co"]
     var_no2=airPollution["list"][0]["components"]["no2"]
     var_o3=airPollution["list"][0]["components"]["o3"]
     var_so2=airPollution["list"][0]["components"]["so2"]
     var_pm2_5=airPollution["list"][0]["components"]["pm2_5"]
     var_pm10=airPollution["list"][0]["components"]["pm10"]
     var_nh3=airPollution["list"][0]["components"]["nh3"]
-    return render_template('resultsPro.php',location=location,temp=temp,feels_like=feels_like,weather=weather,lat=lattitude,lon=longitude,var_no=var_no,var_no2=var_no2,var_o3=var_o3,var_so2=var_so2,var_pm2_5=var_pm2_5,var_pm10=var_pm10,var_nh3=var_nh3)
-
-
-def render_result_pro():
-    return render_template('results.php')
+    return render_template('resultsPro.php',location=location,temp=temp,feels_like=feels_like,weather=weather,lat=lattitude,lon=longitude,var_no=var_no,var_co=var_co,var_no2=var_no2,var_o3=var_o3,var_so2=var_so2,var_pm2_5=var_pm2_5,var_pm10=var_pm10,var_nh3=var_nh3)
 
 
 def get_api_key():
