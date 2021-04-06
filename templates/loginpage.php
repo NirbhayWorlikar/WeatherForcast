@@ -44,8 +44,7 @@ header("location: loginaction.php");  //page to load after login
 					<div class="main-navigation">
 						<button type="button" class="menu-toggle"><i class="fa fa-bars"></i></button>
 						<ul class="menu">
-						<!--	<li class="menu-item"><a href="index.html">Home</a></li> -->
-						<!--	<li class="menu-item"><a href="news.html">News</a></li> -->
+							<li class="menu-item"><a href="index.html">Home</a></li>
 							<li class="menu-item current-menu-item"><a href="loginpage.php">Login</a></li>
 							<li class="menu-item"><a href="contact.html">Contact</a></li>
 						</ul> <!-- .menu -->
@@ -55,55 +54,8 @@ header("location: loginaction.php");  //page to load after login
 
 				</div>
 			</div> <!-- .site-header -->
-
-<!--
+			
 			<main class="main-content">
-				<div class="container">
-					<div class="breadcrumb">
-						<a href="index.html">Home</a>
-						<span>Login</span>
-					</div>
-				</div>
-				
-				<div class="fullwidth-block">
-					<form>
-					
-					<table border='0' width='480px' cellpadding='0' cellspacing='0' align='center'>
-					<tr>
-						<td align='center'><label for="name"><b>Enter Name</b></label></td>
-						<td><input type="text" placeholder="Enter Name" name="name"></td>
-					</tr>
-					<tr> <td>&nbsp;</td> </tr>
-					<tr>
-						<td align='center'><label for="email"><b>Enter Email</b></label></td>
-						<td><input type="text" placeholder="Enter Email" name="email"></td>
-					</tr>
-					<tr> <td>&nbsp;</td> </tr>
-					<tr>
-						<td align='center'><label for="pwd"><b>Password</b></label></td>
-						<td><input type="password" placeholder="Enter Password" name="pwd"></td>
-					</tr>
-					<tr> <td>&nbsp;</td> </tr>
-					
-					<table border='0' cellpadding='0' cellspacing='0' width='480px' align='center'>
-					<tr>
-						<td align='center'><button type="submit" class="loginbtn"><strong>Login</strong></button></td>
-					</tr>
-					<tr> <td>&nbsp;</td> </tr>
-					</table>
-					
-					</form>
-				</div>
-				
-			</main> <!-- .main-content -->
-
-			<main class="main-content">
-				<div class="container">
-					<div class="breadcrumb">
-						<!-- <a href="index.html">Home</a> -->
-						<span>User Login</span>
-					</div>
-				</div>
 				
 				<div class="fullwidth-block">
 				<body>

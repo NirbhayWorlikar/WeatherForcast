@@ -26,8 +26,6 @@ header("location: loginaction.php"); //page to load after login
         
     </head>
 
- 
-
 
     <body>
         
@@ -49,13 +47,11 @@ header("location: loginaction.php"); //page to load after login
                         <button type="button" class="menu-toggle"><i class="fa fa-bars"></i></button>
                         <ul class="menu">
                             <li class="menu-item current-menu-item"><a href="index.html">Home</a></li>
-                            <li class="menu-item"><a href="news.html">News</a></li>
-                            <li class="menu-item"><a href="login.html">Login</a></li>
+							<li class="menu-item"><a href="logout.php">Logout</a></li>
                             <li class="menu-item"><a href="contact.html">Contact</a></li>
+							
                         </ul> <!-- .menu -->
                     </div> <!-- .main-navigation -->
-
- 
 
                     <div class="mobile-navigation"></div>
 
@@ -66,26 +62,14 @@ header("location: loginaction.php"); //page to load after login
 
  
 
-            <h2 class="weatherText">Hey Normal User</h2>  
+            <h2 class="weatherText">Hey Normal User</h2>  <br>
+			
             <form class="weatherText" id="weatherForm" action="{{ url_for('render_results') }}" method="post">     
                 Enter City Name <input class="weatherText" id="weatherInput" type="text" name="city"><br>     
                 <input class="weatherText" id="weatherSubmit" type="submit" value="Submit"> 
             </form>
         
-            <div class="col-md-3 col-md-offset-1">
-                            <div class="social-links">
-                                <a href="#"><i class="fa fa-facebook"></i></a>
-                                <a href="#"><i class="fa fa-twitter"></i></a>
-                                <a href="#"><i class="fa fa-google-plus"></i></a>
-                                <a href="#"><i class="fa fa-pinterest"></i></a>
-                            </div>
-                        </div>
-                    </div>
 
- 
-
-                </div>
-            </footer> <!-- .site-footer -->
         </div>
         
         <script src="js/jquery-1.11.1.min.js"></script>

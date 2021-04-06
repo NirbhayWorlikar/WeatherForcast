@@ -47,9 +47,8 @@ header("location: loginaction.php"); //page to load after login
                     <div class="main-navigation">
                         <button type="button" class="menu-toggle"><i class="fa fa-bars"></i></button>
                         <ul class="menu">
-                            <li class="menu-item current-menu-item"><a href="index.html">Home</a></li>
-                            <li class="menu-item"><a href="news.html">News</a></li>
-                            <li class="menu-item"><a href="login.html">Login</a></li>
+                            <li class="menu-item"><a href="index.html">Home</a></li>
+                            <li class="menu-item"><a href="logout.php">Logout</a></li>
                             <li class="menu-item"><a href="contact.html">Contact</a></li>
                         </ul> <!-- .menu -->
                     </div> <!-- .main-navigation -->
@@ -80,15 +79,7 @@ header("location: loginaction.php"); //page to load after login
                 <br><h2> SO2 :{{var_so2}}% and PM2_5 : {{var_pm2_5}}% </h2> 
                 <br><h2> PM10 :{{var_pm10}}% and NH3 : {{var_nh3}}% </h2> 
             </div>
-        
-            <div class="col-md-3 col-md-offset-1">
-                            <div class="social-links">
-                                <a href="#"><i class="fa fa-facebook"></i></a>
-                                <a href="#"><i class="fa fa-twitter"></i></a>
-                                <a href="#"><i class="fa fa-google-plus"></i></a>
-                                <a href="#"><i class="fa fa-pinterest"></i></a>
-                            </div>
-                        </div>
+    
                     </div>
 
  
